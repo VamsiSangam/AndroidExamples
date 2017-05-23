@@ -9,13 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".TodayActivity" />
+        <activity android:name=".FirstActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".ThirdActivity" />
+        <activity android:name=".FourthActivity" />
+        <activity android:name=".FifthActivity" />
+        <activity android:name=".DiscountCalculatorActivity" />
+        <activity android:name=".CourseFeeActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AgeCalculatorActivity" />
+        <activity android:name=".CustomToastActivity" />
+        <activity android:name=".NoticationDemoActivity" />
+        <activity android:name=".DialogsDemoActivity" />
+        <activity android:name=".TimerActivity" />
+        <activity android:name=".BirthdayCalculatorActivity" />
+        <activity android:name=".UserPreferencesActivity" />
+        <activity android:name=".ReadWritePreferencesActivity"></activity>
     </application>
 
 </manifest>

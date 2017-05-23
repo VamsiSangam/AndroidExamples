@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Display Info Toast" android:id="@+id/contextMenuHomeDisplayToast"></item>
+    <item android:title="Show Features">
+        <menu>
+            <item android:title="Discount Calculator" android:id="@+id/contextMenuHomeDiscountCalculator"></item>
+            <item android:title="Age Calculator" android:id="@+id/contextMenuHomeAgeCalculator"></item>
+        </menu>
+    </item>
+    <item android:title="Close App" android:id="@+id/contextMenuHomeCloseApp"></item>
+</menu>

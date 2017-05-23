@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vamsisangam.androidexamples.FirstActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is the FirstActivity. Use it to start other activities."
+        android:textSize="25dp"
+        android:layout_margin="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today activity displays current time and clears it on user's request."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start TodayActivity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showTodayActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Second activity, takes user input and displays it in this activity as toast. Demonstrates calling and Activity for result."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start SecondActivity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showSecondActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Third activity, displays factors of a number. Demonstrates that data is lost when phone's orientation is changed."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start ThirdActivity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showThirdActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fourth activity, displays factors of a number. Demonstrates how data can be stored to prevent data loss when phone's orientation is changed."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start FourthActivity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showFourthActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fifth activity is an empty acitvity which displays log messages to demonstrate the Lifecycle of an Activity."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start FifthActivity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showFifthActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interest calculator calculates interest and is adaptable to screen's orientation."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start InterestCalculator"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showDiscountCalculatorActivity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Fee calculates and displays the course fee as the user starts to change the options."
+                android:textSize="17.5dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start CourseFee"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="showCourseFeeActivity"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

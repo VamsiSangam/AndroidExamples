@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:text="Amount"
+                android:textSize="20dp"
+                android:layout_weight="1"/>
+            <EditText android:inputType="number"
+                android:hint="Enter amount here"
+                android:layout_weight="3"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="10dp">
+            <TextView
+                android:text="Discount"
+                android:textSize="20dp"
+                android:layout_weight="1"/>
+            <EditText android:inputType="number"
+                android:hint="Enter discount here"
+                android:layout_weight="3"/>
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:text="Calculate!"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your result will appear here!"
+        android:textSize="25dp"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>

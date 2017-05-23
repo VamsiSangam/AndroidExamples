@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="Name"
+        android:key="name"
+        android:summary="Your name for display purposes"/>
+    <ListPreference
+        android:title="Color"
+        android:key="favColor"
+        android:summary="Choose a favourite color and we will modify the app's theme accordingly!"
+        android:entries="@array/colorNames"
+        android:entryValues="@array/colorValues" />
+    <CheckBoxPreference
+        android:title="Auto Login"
+        android:key="autoLogin"
+        android:summary="Check this to enable auto login feature"/>
+</PreferenceScreen>

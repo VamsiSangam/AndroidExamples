@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vamsisangam.androidexamples.CourseFeeActivity"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/courses"
+        android:id="@+id/courseFeeCourseSpinner"></Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select course timing -"
+        android:textSize="19sp"
+        android:layout_marginTop="15dp"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/courseFeeRbGroup">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning"
+            android:layout_weight="1"
+            android:checked="true"
+            android:id="@+id/courseFeeRbMorning"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:layout_weight="1"
+            android:id="@+id/courseFeeRbEvening"/>
+    </RadioGroup>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am an old student"
+        android:layout_marginTop="15dp"
+        android:id="@+id/courseFeeOldStudent"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I want course material"
+        android:layout_marginTop="15dp"
+        android:id="@+id/courseFeeCourseMaterial"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Calculate Course Fee"
+        android:onClick="calculateCourseFee"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Fee - "
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/courseFeeResult"/>
+
+</LinearLayout>

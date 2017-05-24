@@ -31,7 +31,8 @@
         <activity android:name=".TimerActivity" />
         <activity android:name=".BirthdayCalculatorActivity" />
         <activity android:name=".UserPreferencesActivity" />
-        <activity android:name=".ReadWritePreferencesActivity"></activity>
+        <activity android:name=".ReadWritePreferencesActivity" />
+        <activity android:name=".AsyncTaskDemoActivity"></activity>
     </application>
 
 </manifest>

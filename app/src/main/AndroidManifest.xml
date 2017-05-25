@@ -32,7 +32,10 @@
         <activity android:name=".BirthdayCalculatorActivity" />
         <activity android:name=".UserPreferencesActivity" />
         <activity android:name=".ReadWritePreferencesActivity" />
-        <activity android:name=".AsyncTaskDemoActivity"></activity>
+        <activity android:name=".AsyncTaskDemoActivity" />
+        <activity android:name=".SumServiceActivity"/>
+        <service android:name=".SumService"/>
+        <service android:name=".SumIntentService"/>
     </application>
 
 </manifest>

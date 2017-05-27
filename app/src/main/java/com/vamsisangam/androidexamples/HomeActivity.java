@@ -55,6 +55,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Read/Write User Preferences", "Reads and writes user preferences from a custom .xml file. The layout is not generated and the code to read/write to preferences XML file is manually written."));
         arr.add(new HomeActivityListItem("Calculate sum of first N numbers", "Calculates the sum of first N numbers in a slow manner using AsyncTask. Notifies user after sum has been calculated."));
         arr.add(new HomeActivityListItem("Sum of first N numbers", "Calculates the sum of first N numbers using a Service and an Intent Service. Sends a notification when done."));
+        arr.add(new HomeActivityListItem("Sum of N numbers, by Bound Service!", "Calculates the sum of first N numbers using a BoundService."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -104,6 +105,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(14, ReadWritePreferencesActivity.class);
         activityMap.put(15, AsyncTaskDemoActivity.class);
         activityMap.put(16, SumServiceActivity.class);
+        activityMap.put(17, SumBoundServiceActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

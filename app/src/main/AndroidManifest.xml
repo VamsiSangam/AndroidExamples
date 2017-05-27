@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TodayActivity" />
-        <activity android:name=".FirstActivity" />
+        <activity android:name=".FirstActivity">
+            <intent-filter>
+                <action android:name="home"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".SecondActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".FourthActivity" />
@@ -30,15 +35,22 @@
         <activity android:name=".DialogsDemoActivity" />
         <activity android:name=".TimerActivity" />
         <activity android:name=".BirthdayCalculatorActivity" />
-        <activity android:name=".UserPreferencesActivity" />
+        <activity android:name=".UserPreferencesActivity">
+            <intent-filter>
+                <action android:name="prefs"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ReadWritePreferencesActivity" />
         <activity android:name=".AsyncTaskDemoActivity" />
         <activity android:name=".SumServiceActivity" />
-        <activity android:name=".SumBoundServiceActivity"/>
+        <activity android:name=".SumBoundServiceActivity" />
 
         <service android:name=".SumService" />
         <service android:name=".SumIntentService" />
         <service android:name=".SumBoundService" />
+
+        <activity android:name=".ImplicitIntentDemoActivity"/>
     </application>
 
 </manifest>

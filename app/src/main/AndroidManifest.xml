@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vamsisangam.androidexamples">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +13,8 @@
         <activity android:name=".TodayActivity" />
         <activity android:name=".FirstActivity">
             <intent-filter>
-                <action android:name="home"/>
+                <action android:name="home" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -37,7 +39,8 @@
         <activity android:name=".BirthdayCalculatorActivity" />
         <activity android:name=".UserPreferencesActivity">
             <intent-filter>
-                <action android:name="prefs"/>
+                <action android:name="prefs" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -50,7 +53,9 @@
         <service android:name=".SumIntentService" />
         <service android:name=".SumBoundService" />
 
-        <activity android:name=".ImplicitIntentDemoActivity"/>
+        <activity android:name=".ImplicitIntentDemoActivity" />
+        <activity android:name=".TimerTickerReceiverActivity"/>
+        <receiver android:name=".TimeTickReceiver"/>
     </application>
 
 </manifest>

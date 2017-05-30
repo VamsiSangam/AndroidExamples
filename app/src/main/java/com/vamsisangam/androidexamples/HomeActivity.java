@@ -57,6 +57,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Sum of first N numbers", "Calculates the sum of first N numbers using a Service and an Intent Service. Sends a notification when done."));
         arr.add(new HomeActivityListItem("Sum of N numbers, by Bound Service!", "Calculates the sum of first N numbers using a BoundService."));
         arr.add(new HomeActivityListItem("Start ANY Activity!!", "Uses and implicit intent to start an activity based on given action/category/data."));
+        arr.add(new HomeActivityListItem("Time Ticker Receiver Activity", "Registers a Broadcast receiver to TIME_TICKER programmatically. Logs a statement after each minute. We can create an Alarm App by using the TIME_TICKER action."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -108,6 +109,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(16, SumServiceActivity.class);
         activityMap.put(17, SumBoundServiceActivity.class);
         activityMap.put(18, ImplicitIntentDemoActivity.class);
+        activityMap.put(19, TimerTickerReceiverActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

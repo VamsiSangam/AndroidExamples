@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 public class ImplicitIntentDemoActivity extends Activity {
-    EditText action, category, data;
+    EditText action, category, data, mimeType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class ImplicitIntentDemoActivity extends Activity {
         action = (EditText) findViewById(R.id.ImplicitIntentAction);
         category = (EditText) findViewById(R.id.ImplicitIntentCategory);
         data = (EditText) findViewById(R.id.ImplicitIntentData);
+        mimeType = (EditText) findViewById(R.id.ImplicitIntentMIMEType);
     }
 
     public void invokeImplicitIntent(View v) {

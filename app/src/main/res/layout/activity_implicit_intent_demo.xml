@@ -24,6 +24,12 @@
         android:hint="Enter data"
         android:id="@+id/ImplicitIntentData"
         android:layout_marginTop="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter MIME Type"
+        android:id="@+id/ImplicitIntentMIMEType"
+        android:layout_marginTop="15dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

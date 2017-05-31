@@ -15,10 +15,10 @@ public class CustomAdapterActivity extends ListActivity {
 
         ArrayList<Company> companies = new ArrayList<>();
 
-        companies.add(new Company("Microsoft", "0123456789", "www.microsoft.com", "microsoft"));
-        companies.add(new Company("Apple", "1234567890", "www.apple.com", "apple"));
-        companies.add(new Company("Facebook", "2345678901", "www.facebook.com", "facebook"));
-        companies.add(new Company("Google", "4567890123", "www.google.com", "google"));
+        companies.add(new Company("Microsoft", "0123456789", "http://www.microsoft.com", "microsoft"));
+        companies.add(new Company("Apple", "1234567890", "http://www.apple.com", "apple"));
+        companies.add(new Company("Facebook", "2345678901", "http://www.facebook.com", "facebook"));
+        companies.add(new Company("Google", "4567890123", "http://www.google.com", "google"));
 
         CompanyAdapter adapter = new CompanyAdapter(this, companies);
 

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vamsisangam.androidexamples">
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -56,6 +60,8 @@
         <activity android:name=".ImplicitIntentDemoActivity" />
         <activity android:name=".TimerTickerReceiverActivity"/>
         <receiver android:name=".TimeTickReceiver"/>
+
+        <activity android:name=".CustomAdapterActivity"/>
     </application>
 
 </manifest>

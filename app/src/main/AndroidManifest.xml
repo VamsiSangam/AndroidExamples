@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vamsisangam.androidexamples">
+
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="16" />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -58,10 +62,12 @@
         <service android:name=".SumBoundService" />
 
         <activity android:name=".ImplicitIntentDemoActivity" />
-        <activity android:name=".TimerTickerReceiverActivity"/>
-        <receiver android:name=".TimeTickReceiver"/>
+        <activity android:name=".TimerTickerReceiverActivity" />
 
-        <activity android:name=".CustomAdapterActivity"/>
+        <receiver android:name=".TimeTickReceiver" />
+
+        <activity android:name=".CustomAdapterActivity" />
+        <activity android:name=".fragments.FragmentsDemoActivity"></activity>
     </application>
 
 </manifest>

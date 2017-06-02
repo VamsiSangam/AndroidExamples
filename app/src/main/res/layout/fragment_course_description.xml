@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vamsisangam.androidexamples.fragments.CourseDescriptionFragment"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:text="Some description about the selected course will be displayed here."
+        android:id="@+id/txtCourseDescription"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"/>
+
+</FrameLayout>

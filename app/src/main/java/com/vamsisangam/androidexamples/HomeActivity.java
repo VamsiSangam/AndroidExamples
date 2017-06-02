@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.vamsisangam.androidexamples.fragments.CourseFragmentsActivity;
 import com.vamsisangam.androidexamples.fragments.FragmentsDemoActivity;
 
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Time Ticker Receiver Activity", "Registers a Broadcast receiver to TIME_TICKER programmatically. Logs a statement after each minute. We can create an Alarm App by using the TIME_TICKER action."));
         arr.add(new HomeActivityListItem("Custom Adapter Demo", "Demonstrates a custom adapter. Displays a company's name, logo and buttons to call the company and also to view its website."));
         arr.add(new HomeActivityListItem("Fragments Demo activity", "Demonstrates add, remove, replacing a fragment."));
+        arr.add(new HomeActivityListItem("Course Fragments", "Displays one fragment consisting of courses, another having its description. Displays 2 fragments side by side in landscape, and in separate activities in portrait mode."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -116,6 +118,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(19, TimerTickerReceiverActivity.class);
         activityMap.put(20, CustomAdapterActivity.class);
         activityMap.put(21, FragmentsDemoActivity.class);
+        activityMap.put(22, CourseFragmentsActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -67,7 +67,9 @@
         <receiver android:name=".TimeTickReceiver" />
 
         <activity android:name=".CustomAdapterActivity" />
-        <activity android:name=".fragments.FragmentsDemoActivity"></activity>
+        <activity android:name=".fragments.FragmentsDemoActivity" />
+        <activity android:name=".fragments.CoursesDescriptionActivity" />
+        <activity android:name=".fragments.CourseFragmentsActivity"></activity>
     </application>
 
 </manifest>

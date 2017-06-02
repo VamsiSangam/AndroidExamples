@@ -30,10 +30,10 @@ public class CourseFragmentsActivity extends Activity {
         switch (rotation) {
             case Surface.ROTATION_90:
             case Surface.ROTATION_270:
-                return PORTRAIT;
+                return LANDSCAPE;
         }
 
-        return LANDSCAPE;
+        return PORTRAIT;
     }
 
     public void setCourseDescription(String description) {

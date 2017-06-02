@@ -2,6 +2,7 @@ package com.vamsisangam.androidexamples.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Surface;
 import android.view.WindowManager;
@@ -20,10 +21,20 @@ public class CoursesDescriptionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses_description);
 
-        String desc = getIntent().getStringExtra("description");
-        TextView tv = (TextView) findViewById(R.id.txtCourseDescription);
 
-        tv.setText(desc);
+
+        if (getMode() == PORTRAIT) {
+            String desc = getIntent().getStringExtra("description");
+            TextView tv = (TextView) findViewById(R.id.txtCourseDescription);
+
+            tv.setText(desc);
+        } else {
+            Intent intent = new Intent(this, CourseFragmentsActivity.class);
+
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private int getMode() {

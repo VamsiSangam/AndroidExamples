@@ -25,7 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Java SE 8" />
+            android:text="Java SE 8"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/rbAndroid"

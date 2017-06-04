@@ -69,7 +69,11 @@
         <activity android:name=".CustomAdapterActivity" />
         <activity android:name=".fragments.FragmentsDemoActivity" />
         <activity android:name=".fragments.CoursesDescriptionActivity" />
-        <activity android:name=".fragments.CourseFragmentsActivity"></activity>
+        <activity android:name=".fragments.CourseFragmentsActivity" />
+        <activity android:name=".storage.internal.CourseManagerActivity" />
+        <activity android:name=".storage.internal.AddCourseActivity" />
+        <activity android:name=".storage.internal.DeleteCourseActivity" />
+        <activity android:name=".storage.internal.EditCourseActivity"></activity>
     </application>
 
 </manifest>

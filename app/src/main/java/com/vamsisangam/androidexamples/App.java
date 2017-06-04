@@ -14,4 +14,8 @@ public class App {
     public static void log(String message) {
         Log.d(TAG, message);
     }
+
+    public static void error(String message) {
+        Log.e(TAG, message);
+    }
 }

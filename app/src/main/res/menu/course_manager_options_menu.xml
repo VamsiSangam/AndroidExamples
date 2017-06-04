@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Add Course" android:id="@+id/coursesAddOption" android:showAsAction="ifRoom" android:icon="@drawable/add_course"></item>
+    <item android:title="Delete Course" android:id="@+id/coursesDeleteOption" android:showAsAction="ifRoom" android:icon="@drawable/delete_course"></item>
+    <item android:title="Edit Course" android:id="@+id/coursesEditOption" android:showAsAction="ifRoom" android:icon="@drawable/edit_course"></item>
+</menu>

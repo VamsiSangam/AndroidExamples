@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course Name"
+        android:textSize="22sp"
+        android:id="@+id/courseName"
+        android:textColor="@color/colorPrimaryDark"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Duration"
+            android:textSize="18sp"
+            android:id="@+id/courseDuration"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Fee"
+            android:textSize="18sp"
+            android:id="@+id/courseFee"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+</LinearLayout>

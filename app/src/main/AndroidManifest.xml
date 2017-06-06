@@ -2,14 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vamsisangam.androidexamples">
 
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="16" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -73,7 +66,8 @@
         <activity android:name=".storage.internal.CourseManagerActivity" />
         <activity android:name=".storage.internal.AddCourseActivity" />
         <activity android:name=".storage.internal.DeleteCourseActivity" />
-        <activity android:name=".storage.internal.EditCourseActivity"></activity>
+        <activity android:name=".storage.internal.EditCourseActivity" />
+        <activity android:name=".storage.external.ExternalStorageDemoActivity"></activity>
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.vamsisangam.androidexamples.fragments.CourseFragmentsActivity;
 import com.vamsisangam.androidexamples.fragments.FragmentsDemoActivity;
+import com.vamsisangam.androidexamples.storage.external.ExternalStorageDemoActivity;
 import com.vamsisangam.androidexamples.storage.internal.CourseManagerActivity;
 
 import java.util.ArrayList;
@@ -66,6 +67,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Fragments Demo activity", "Demonstrates add, remove, replacing a fragment."));
         arr.add(new HomeActivityListItem("Course Fragments", "Displays one fragment consisting of courses, another having its description. Displays 2 fragments side by side in landscape, and in separate activities in portrait mode."));
         arr.add(new HomeActivityListItem("Course Manager App", "Add courses, delete courses, edit courses all in one place. Stores data into internal storage. Reads and writes data into .txt file."));
+        arr.add(new HomeActivityListItem("External Storage Demo!", "Programmatically accesses the external storage and creates files/directory. Asks for permissions at runtime for devices > API 23."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -122,6 +124,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(21, FragmentsDemoActivity.class);
         activityMap.put(22, CourseFragmentsActivity.class);
         activityMap.put(23, CourseManagerActivity.class);
+        activityMap.put(24, ExternalStorageDemoActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

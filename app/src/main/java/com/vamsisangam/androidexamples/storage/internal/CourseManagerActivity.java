@@ -45,12 +45,7 @@ public class CourseManagerActivity extends ListActivity {
                 new String[]{ "name", "duration", "fee" },
                 new int[]{ R.id.courseName, R.id.courseDuration, R.id.courseFee });
 
-        //if (getListView().getAdapter() != null) {
-            //SimpleAdapter oldAdapter = (SimpleAdapter) getListView().getAdapter();
-            //oldAdapter.notifyDataSetChanged();
-        //} else {
-            getListView().setAdapter(adapter);
-        //}
+        getListView().setAdapter(adapter);
     }
 
     private void readCourses() {

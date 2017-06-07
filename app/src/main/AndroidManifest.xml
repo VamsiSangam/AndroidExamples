@@ -67,7 +67,8 @@
         <activity android:name=".storage.internal.AddCourseActivity" />
         <activity android:name=".storage.internal.DeleteCourseActivity" />
         <activity android:name=".storage.internal.EditCourseActivity" />
-        <activity android:name=".storage.external.ExternalStorageDemoActivity"></activity>
+        <activity android:name=".storage.external.ExternalStorageDemoActivity" />
+        <activity android:name=".storage.database.AddCourseActivity"></activity>
     </application>
 
 </manifest>

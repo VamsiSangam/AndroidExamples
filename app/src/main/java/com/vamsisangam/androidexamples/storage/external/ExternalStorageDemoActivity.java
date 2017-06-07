@@ -92,7 +92,7 @@ public class ExternalStorageDemoActivity extends Activity {
                 txtMessage.append("New directory already present!\n");
             }
         } catch (Exception ex) {
-            txtMessage.setText("Exception - " + ex.getMessage());
+            txtMessage.append("Exception - " + ex.getMessage());
         }
     }
 
@@ -111,8 +111,9 @@ public class ExternalStorageDemoActivity extends Activity {
             }
 
             bw.close();
+            txtMessage.append("Written to file successfully.");
         } catch (Exception ex) {
-            txtMessage.setText("Exception - " + ex.getMessage());
+            txtMessage.append("Exception - " + ex.getMessage());
         }
     }
 
@@ -129,6 +130,11 @@ public class ExternalStorageDemoActivity extends Activity {
                 txtMessage.append("\"camera\" folder exists in path = "
                            + camera.getAbsolutePath() + "\n");
 
+                txtMessage.append("Listing all files in dcim folder -\n");
+                for (String file : dcim.list()) {
+                    txtMessage.append(file + "\n");
+                }
+
                 txtMessage.append("Listing all files in camera folder -\n");
                 for (String file : camera.list()) {
                     txtMessage.append(file + "\n");
@@ -137,7 +143,7 @@ public class ExternalStorageDemoActivity extends Activity {
                 txtMessage.append("\"camera\" folder does not exist!");
             }
         } catch (Exception ex) {
-            txtMessage.setText("Exception - " + ex.getMessage());
+            txtMessage.append("Exception - " + ex.getMessage());
         }
     }
 }

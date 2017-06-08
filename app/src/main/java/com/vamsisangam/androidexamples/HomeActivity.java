@@ -127,7 +127,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(22, CourseFragmentsActivity.class);
         activityMap.put(23, CourseManagerActivity.class);
         activityMap.put(24, ExternalStorageDemoActivity.class);
-        activityMap.put(25, com.vamsisangam.androidexamples.storage.database.AddCourseActivity.class);
+        activityMap.put(25, com.vamsisangam.androidexamples.storage.database.CourseManagerActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

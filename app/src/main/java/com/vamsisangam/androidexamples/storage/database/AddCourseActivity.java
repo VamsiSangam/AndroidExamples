@@ -40,7 +40,7 @@ public class AddCourseActivity extends Activity {
             values.put(CourseDbHelper.COL_FEE, fee);
             values.put(CourseDbHelper.COL_DURATION, duration);
 
-            db.insert(CourseDbHelper.TABLE_NAME, null, values);
+            db.insert(CourseDbHelper.TABLE_COURSES, null, values);
 
             Toast.makeText(this, "Course added to database successfully!", Toast.LENGTH_LONG).show();
             courseName.setText("");

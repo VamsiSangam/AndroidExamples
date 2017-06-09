@@ -71,7 +71,9 @@
         <activity android:name=".storage.database.AddCourseActivity" />
         <activity android:name=".storage.database.CourseManagerActivity" />
         <activity android:name=".storage.database.CourseEditRemoveActivity" />
-        <activity android:name=".storage.database.CourseSearchActivity"></activity>
+        <activity android:name=".storage.database.CourseSearchActivity" />
+        <activity android:name=".storage.database.AddTopicActivity" />
+        <activity android:name=".storage.database.ListTopicsActivity"></activity>
     </application>
 
 </manifest>

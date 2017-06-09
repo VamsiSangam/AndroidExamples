@@ -31,7 +31,7 @@ public class CourseManagerActivity extends ListActivity {
         try {
             CourseDbHelper dbHelper = new CourseDbHelper(this);
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(dbHelper.TABLE_NAME, null, null, null, null, null, null);
+            Cursor cursor = db.query(dbHelper.TABLE_COURSES, null, null, null, null, null, null);
             String[] from = {dbHelper.COL_NAME, dbHelper.COL_FEE, dbHelper.COL_DURATION};
             int[] to = {R.id.courseName, R.id.courseFee, R.id.courseDuration};
             SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.courses_list_item, cursor, from, to, 0);

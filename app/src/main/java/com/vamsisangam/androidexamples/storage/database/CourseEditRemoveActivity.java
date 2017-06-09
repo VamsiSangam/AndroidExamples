@@ -1,11 +1,7 @@
 package com.vamsisangam.androidexamples.storage.database;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,7 +46,7 @@ public class CourseEditRemoveActivity extends Activity {
         try {
             CourseDbHelper dbHelper = new CourseDbHelper(this);
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(dbHelper.TABLE_NAME, null, CourseDbHelper.COL_ID + " = ?",
+            Cursor cursor = db.query(dbHelper.TABLE_COURSES, null, CourseDbHelper.COL_ID + " = ?",
                     new String[] {courseId}, null, null, null);
 
             if (cursor.moveToFirst()) {
@@ -88,7 +84,7 @@ public class CourseEditRemoveActivity extends Activity {
             values.put(CourseDbHelper.COL_FEE, courseFee.getText().toString());
             values.put(CourseDbHelper.COL_DURATION, courseDuration.getText().toString());
 
-            int count = db.update(CourseDbHelper.TABLE_NAME, values,
+            int count = db.update(CourseDbHelper.TABLE_COURSES, values,
                     CourseDbHelper.COL_ID + " = ?", new String[]{Id});
 
             if (count == 1) {
@@ -118,7 +114,7 @@ public class CourseEditRemoveActivity extends Activity {
 
             CourseDbHelper dbHelper = new CourseDbHelper(this);
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            int count = db.delete(CourseDbHelper.TABLE_NAME, CourseDbHelper.COL_ID + " = ?",
+            int count = db.delete(CourseDbHelper.TABLE_COURSES, CourseDbHelper.COL_ID + " = ?",
                     new String[]{Id});
 
             if (count == 1) {
@@ -132,5 +128,19 @@ public class CourseEditRemoveActivity extends Activity {
             clearFields();
             Toast.makeText(this, "Exception - " + ex.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void showAddTopics(View v) {
+        Intent intent = new Intent(this, AddTopicActivity.class);
+
+        intent.putExtra("ID", Id);
+        startActivity(intent);
+    }
+
+    public void showListTopics(View v) {
+        Intent intent = new Intent(this, ListTopicsActivity.class);
+
+        intent.putExtra("ID", Id);
+        startActivity(intent);
     }
 }

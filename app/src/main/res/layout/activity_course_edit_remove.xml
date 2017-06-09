@@ -46,17 +46,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save Changes"
             android:onClick="saveCourseDetails"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Topics to this course"
+            android:onClick="showAddTopics"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List Topics already added to this course"
+            android:onClick="showListTopics"/>
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Delete Course"
-            android:layout_marginLeft="10dp"
             android:onClick="deleteCourse"/>
     </LinearLayout>
 </LinearLayout>

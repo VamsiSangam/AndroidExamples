@@ -51,22 +51,22 @@ public class CourseSearchActivity extends Activity {
         try {
             CourseDbHelper dbHelper = new CourseDbHelper(this);
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(dbHelper.TABLE_NAME, null, "UPPER(" + CourseDbHelper.COL_NAME + ") LIKE ?",
+            Cursor cursor = db.query(dbHelper.TABLE_COURSES, null, "UPPER(" + CourseDbHelper.COL_NAME + ") LIKE ?",
                         new String[]{"%" + name + "%"}, null, null, null);
-            String[] from = {dbHelper.COL_NAME, dbHelper.COL_FEE, dbHelper.COL_DURATION};
-            int[] to = {R.id.courseName, R.id.courseFee, R.id.courseDuration};
-            SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.courses_list_item, cursor, from, to, 0);
+            ArrayList<Course> courses = new ArrayList<>();
 
-            searchResults.setAdapter(adapter);
-            resultIds = new ArrayList<>(cursor.getCount());
-
-            if (cursor.moveToFirst()) {
-                do {
-                    resultIds.add(cursor.getString(cursor.getColumnIndex(CourseDbHelper.COL_ID)));
-                } while (cursor.moveToNext());
+            while (cursor.moveToNext()) {
+                courses.add(new Course(
+                        cursor.getString(cursor.getColumnIndex(CourseDbHelper.COL_ID)),
+                        cursor.getString(cursor.getColumnIndex(CourseDbHelper.COL_NAME)),
+                        cursor.getString(cursor.getColumnIndex(CourseDbHelper.COL_DURATION)),
+                        cursor.getString(cursor.getColumnIndex(CourseDbHelper.COL_FEE))
+                ));
             }
 
-            Toast.makeText(this, cursor.getCount()  + " result(s) found!", Toast.LENGTH_LONG).show();
+            CourseSearchResultAdapter adapter = new CourseSearchResultAdapter(this, courses);
+            searchResults.setAdapter(adapter);
+            Toast.makeText(this, courses.size()  + " result(s) found!", Toast.LENGTH_LONG).show();
         } catch (Exception ex) {
             Toast.makeText(this, "Exception - " + ex.getMessage(), Toast.LENGTH_LONG).show();
         }

@@ -2,6 +2,7 @@ package com.vamsisangam.androidexamples.providers.gallery;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
@@ -22,15 +23,18 @@ import static com.vamsisangam.androidexamples.App.log;
  * Created by Vamsi on 10-06-2017.
  */
 
-public class GalleryAdapter extends ArrayAdapter<String> {
+public class GalleryAdapter extends ArrayAdapter<Image> {
     public Context ctx;
-    public ArrayList<String> imagePaths;
-    final int THUMBNAIL_SIZE = 512;
+    public ArrayList<Image> images;
+    final int THUMBNAIL_SIZE, SCREEN_WIDTH;
 
-    public GalleryAdapter(Context ctx, ArrayList<String> imagePaths) {
-        super(ctx, R.layout.activity_view_photo, imagePaths);
+    public GalleryAdapter(Context ctx, ArrayList<Image> images) {
+        super(ctx, R.layout.activity_view_photo, images);
         this.ctx = ctx;
-        this.imagePaths = imagePaths;
+        this.images = images;
+
+        SCREEN_WIDTH = Resources.getSystem().getDisplayMetrics().widthPixels;
+        THUMBNAIL_SIZE = SCREEN_WIDTH / 2;
     }
 
     @Override
@@ -43,10 +47,10 @@ public class GalleryAdapter extends ArrayAdapter<String> {
 
         try {
             ImageView img = (ImageView) convertView.findViewById(R.id.image);
-            final String path = imagePaths.get(position);
+            final Image image = images.get(position);
             BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 16;
-            Bitmap preview_bitmap = BitmapFactory.decodeStream(new FileInputStream(path), null, options);
+            options.inSampleSize = image.getScaleRatioToHalfScreen();
+            Bitmap preview_bitmap = BitmapFactory.decodeStream(new FileInputStream(image.getPath()), null, options);
             Bitmap thumbnail = ThumbnailUtils.extractThumbnail(preview_bitmap, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
             img.setImageBitmap(thumbnail);
 
@@ -55,7 +59,9 @@ public class GalleryAdapter extends ArrayAdapter<String> {
                 public void onClick(View view) {
                     Intent intent = new Intent(ctx, ViewPhotoActivity.class);
 
-                    intent.putExtra("path", path);
+                    intent.putExtra("path", image.getPath());
+                    intent.putExtra("height", image.getHeight());
+                    intent.putExtra("width", image.getWidth());
 
                     try {
                         ctx.startActivity(intent);

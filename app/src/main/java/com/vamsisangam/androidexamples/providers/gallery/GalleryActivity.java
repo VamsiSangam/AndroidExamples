@@ -28,7 +28,6 @@ import static com.vamsisangam.androidexamples.App.log;
 
 public class GalleryActivity extends Activity {
     TableLayout tableLayoutInternal, tableLayoutExternal;
-    final int THUMBSIZE = 512;
     GridView galleryGrid;
 
     @Override
@@ -46,13 +45,15 @@ public class GalleryActivity extends Activity {
     private void loadImages() {
         Cursor cursor = getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                 null, null, null, null);
-        ArrayList<String> imgPaths = new ArrayList<>();
+        ArrayList<Image> imgPaths = new ArrayList<>();
 
         if (cursor != null) {
             while (cursor.moveToNext()) {
                 String imgPath = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+                int height = cursor.getInt(cursor.getColumnIndex(MediaStore.Images.Media.HEIGHT));
+                int width = cursor.getInt(cursor.getColumnIndex(MediaStore.Images.Media.WIDTH));
 
-                imgPaths.add(imgPath);
+                imgPaths.add(new Image(imgPath, height, width));
             }
         }
 

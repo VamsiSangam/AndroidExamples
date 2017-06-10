@@ -75,7 +75,9 @@
         <activity android:name=".storage.database.CourseSearchActivity" />
         <activity android:name=".storage.database.AddTopicActivity" />
         <activity android:name=".storage.database.ListTopicsActivity" />
-        <activity android:name=".providers.media.ListAlbumsActivity"></activity>
+        <activity android:name=".providers.media.ListAlbumsActivity" />
+        <activity android:name=".providers.gallery.GalleryActivity" />
+        <activity android:name=".providers.gallery.ViewPhotoActivity"></activity>
     </application>
 
 </manifest>

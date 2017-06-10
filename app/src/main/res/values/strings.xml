@@ -19,6 +19,13 @@
         <item>black</item>
         <item>white</item>
     </string-array>
+    <string-array name="contentProviderLocation">
+        <item>Music Albums from Internal Media</item>
+        <item>Music Albums from External</item>
+        <item>Images from Internal Media</item>
+        <item>Images from External Media</item>
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

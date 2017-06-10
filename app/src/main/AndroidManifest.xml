@@ -3,6 +3,7 @@
     package="com.vamsisangam.androidexamples">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -73,7 +74,8 @@
         <activity android:name=".storage.database.CourseEditRemoveActivity" />
         <activity android:name=".storage.database.CourseSearchActivity" />
         <activity android:name=".storage.database.AddTopicActivity" />
-        <activity android:name=".storage.database.ListTopicsActivity"></activity>
+        <activity android:name=".storage.database.ListTopicsActivity" />
+        <activity android:name=".providers.media.ListAlbumsActivity"></activity>
     </application>
 
 </manifest>

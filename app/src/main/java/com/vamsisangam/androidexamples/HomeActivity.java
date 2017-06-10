@@ -69,7 +69,8 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Course Fragments", "Displays one fragment consisting of courses, another having its description. Displays 2 fragments side by side in landscape, and in separate activities in portrait mode."));
         arr.add(new HomeActivityListItem("Course Manager App", "Add courses, delete courses, edit courses all in one place. Stores data into internal storage. Reads and writes data into .txt file."));
         arr.add(new HomeActivityListItem("External Storage Demo!", "Programmatically accesses the external storage and creates files/directory. Asks for permissions at runtime for devices > API 23."));
-        arr.add(new HomeActivityListItem("Store your courses in database!", "Creates a database to store all your courses. Create, remove, update and display all your courses!"));
+        arr.add(new HomeActivityListItem("Store your courses in database!", "Creates a database to store all your courses. Create, remove, update and display all your courses! Also add topics to your course. You can add/remove/list topics!"));
+        arr.add(new HomeActivityListItem("List all your albums and artists!", "Lists all your albums and artists in your internal / external storage. Uses content providers."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -128,6 +129,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(23, CourseManagerActivity.class);
         activityMap.put(24, ExternalStorageDemoActivity.class);
         activityMap.put(25, com.vamsisangam.androidexamples.storage.database.CourseManagerActivity.class);
+        activityMap.put(26, com.vamsisangam.androidexamples.providers.media.ListAlbumsActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

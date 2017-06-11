@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.vamsisangam.androidexamples.fragments.CourseFragmentsActivity;
 import com.vamsisangam.androidexamples.fragments.FragmentsDemoActivity;
+import com.vamsisangam.androidexamples.networking.countries.CountriesActivity;
 import com.vamsisangam.androidexamples.providers.gallery.GalleryActivity;
 import com.vamsisangam.androidexamples.storage.external.ExternalStorageDemoActivity;
 import com.vamsisangam.androidexamples.storage.internal.AddCourseActivity;
@@ -73,6 +74,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Store your courses in database!", "Creates a database to store all your courses. Create, remove, update and display all your courses! Also add topics to your course. You can add/remove/list topics!"));
         arr.add(new HomeActivityListItem("List all your albums and artists!", "Lists all your albums and artists in your internal / external storage. Uses content providers."));
         arr.add(new HomeActivityListItem("Gallery App", "Display all your photos in external storage."));
+        arr.add(new HomeActivityListItem("Country App", "Search for any country and view its information. Talks to a RESTful service in the internet."));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -133,6 +135,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(25, com.vamsisangam.androidexamples.storage.database.CourseManagerActivity.class);
         activityMap.put(26, com.vamsisangam.androidexamples.providers.media.ListAlbumsActivity.class);
         activityMap.put(27, GalleryActivity.class);
+        activityMap.put(28, CountriesActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -1,27 +1,22 @@
 package com.vamsisangam.androidexamples.networking.countries;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.KeyEvent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.vamsisangam.androidexamples.R;
-
 import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import static com.vamsisangam.androidexamples.App.log;
 
@@ -29,6 +24,7 @@ public class CountriesActivity extends Activity {
     EditText countryName;
     ListView listCountries;
     ArrayList<Country> countries;
+    ProgressDialog dialog;
 
     // This RESTful service was free as of 11-June-2017, can be removed/replaced
     final static String ALL_COUNTRIES_URL = "https://restcountries.eu/rest/v2/all";
@@ -38,6 +34,7 @@ public class CountriesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countries);
         init();
+        dialog = ProgressDialog.show(this, "Loading", "Fetching required data. Make sure you have a decent internet connection. Please wait...");
 
         countryName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -109,6 +106,7 @@ public class CountriesActivity extends Activity {
                     countryName.post(new Runnable() {
                         @Override
                         public void run() {
+                            dialog.dismiss();
                             Toast.makeText(getApplicationContext(),
                                     "Data loaded! Ready to use application!", Toast.LENGTH_LONG).show();
                         }

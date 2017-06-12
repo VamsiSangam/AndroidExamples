@@ -76,6 +76,21 @@ public class CountrySearchAdapter extends ArrayAdapter<Country> {
                     }
                 }
             }).start();
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, CountryDetailsActivity.class);
+
+                    intent.putExtra("name", country.getName());
+                    intent.putExtra("capital", country.getCapital());
+                    intent.putExtra("details", country.getDetailedInfo());
+                    intent.putExtra("flag", country.getFlagURL());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    context.startActivity(intent);
+                }
+            });
         } catch (Exception ex) {
             log("Exception 3 - " + ex.getMessage());
             ex.printStackTrace();

@@ -85,4 +85,23 @@ public class Country {
     public ArrayList<String> getLanguages() {
         return new ArrayList<>(languages);
     }
+
+    public String getDetailedInfo() {
+        StringBuilder info = new StringBuilder();
+
+        info.append("Aplha 2 Code - " + alpha2Code + "\n");
+        info.append("Aplha 3 Code - " + alpha3Code + "\n");
+        info.append("Country population - " + population + "\n");
+        info.append("Latitude - " + lat + "\n");
+        info.append("Longitude - " + lng + "\n");
+        info.append("Languages spoken - ");
+
+        for (int i = 0; i < languages.size() - 1; ++i) {
+            info.append(languages.get(i) + ", ");
+        }
+
+        info.append(languages.get(languages.size() - 1));
+
+        return info.toString();
+    }
 }

@@ -79,7 +79,8 @@
         <activity android:name=".providers.media.ListAlbumsActivity" />
         <activity android:name=".providers.gallery.GalleryActivity" />
         <activity android:name=".providers.gallery.ViewPhotoActivity" />
-        <activity android:name=".networking.countries.CountriesActivity"></activity>
+        <activity android:name=".networking.countries.CountriesActivity" />
+        <activity android:name=".networking.countries.CountryDetailsActivity"></activity>
     </application>
 
 </manifest>

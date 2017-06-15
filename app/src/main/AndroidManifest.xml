@@ -82,7 +82,8 @@
         <activity android:name=".providers.gallery.ViewPhotoActivity" />
         <activity android:name=".networking.countries.CountriesActivity" />
         <activity android:name=".networking.countries.CountryDetailsActivity" />
-        <activity android:name=".location.LocationActivity"></activity>
+        <activity android:name=".location.LocationActivity" />
+        <activity android:name=".media.PlayMediaActivity"></activity>
     </application>
 
 </manifest>

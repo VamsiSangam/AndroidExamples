@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.vamsisangam.androidexamples.fragments.CourseFragmentsActivity;
 import com.vamsisangam.androidexamples.fragments.FragmentsDemoActivity;
 import com.vamsisangam.androidexamples.location.LocationActivity;
+import com.vamsisangam.androidexamples.media.PlayMediaActivity;
 import com.vamsisangam.androidexamples.networking.countries.CountriesActivity;
 import com.vamsisangam.androidexamples.providers.gallery.GalleryActivity;
 import com.vamsisangam.androidexamples.storage.external.ExternalStorageDemoActivity;
@@ -77,6 +78,7 @@ public class HomeActivity extends ListActivity {
         arr.add(new HomeActivityListItem("Gallery App", "Display all your photos in external storage."));
         arr.add(new HomeActivityListItem("Country App", "Search for any country and view its information. Talks to a RESTful service in the internet."));
         arr.add(new HomeActivityListItem("Location App", "Get a lot of details about your current location. Get both accurate and coarse location."));
+        arr.add(new HomeActivityListItem("Play audio and video", "Play audio and video, with and without using Intents!"));
 
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
@@ -139,6 +141,7 @@ public class HomeActivity extends ListActivity {
         activityMap.put(27, GalleryActivity.class);
         activityMap.put(28, CountriesActivity.class);
         activityMap.put(29, LocationActivity.class);
+        activityMap.put(30, PlayMediaActivity.class);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

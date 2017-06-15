@@ -158,7 +158,7 @@ public class LocationActivity extends Activity {
 
     private void activateListener() {
         try {
-            locationManager.requestLocationUpdates(locationProvider, 500, 1, locationListener);
+            locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
         } catch (SecurityException ex) {
             ex.printStackTrace();
         }
